@@ -6,7 +6,27 @@
 </head>
 <body>
   <script>
+    function computerPlay() {
+      randomNumber = Math.floor(Math.random() * 100) + 1;
+      if(randomNumber <= 33){
+        return "Rock";
+      }
+      else if(randomNumber <= 66 && randomNumber > 33){
+        return "Paper";
+      }
+      else if(randomNumber > 66){
+        return "Scissors";
+      }
+    }
+
+    function playerPlay() {
+      playerChoice = prompt("Rock, Paper, or Scissors? ").toLowerCase();
+      playerChoice= playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1);
+      return playerChoice;
+    }
+
     
+
   </script>
 </body>
 </html>
