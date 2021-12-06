@@ -6,6 +6,9 @@
 </head>
 <body>
   <script>
+
+    /* Picks a random number between 1-100 and chooses either Rock, Paper, or Scissors
+    Based off of the number randomly selected */
     function computerPlay() {
       randomNumber = Math.floor(Math.random() * 100) + 1;
       if(randomNumber <= 33){
@@ -19,14 +22,43 @@
       }
     }
 
+    // Asks the player for an input of either Rock, Paper, or Scissors (case insensitive)
     function playerPlay() {
       playerChoice = prompt("Rock, Paper, or Scissors? ").toLowerCase();
+      console.log(playerChoice);
       playerChoice= playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1);
+      console.log(playerChoice);
       return playerChoice;
     }
 
-    
+    // Plays out a single round of Rock, Paper, Scissors
+    function playRound(playerSelection, computerSelection){
+      if(playerSelection === "Rock"){
+        switch(computerSelection){
+          case "Rock": return `It's a tie!`;
+          case "Paper": return `You Lose! ${computerSelection} beats ${playerSelection}`;
+          case "Scissors": return `You Win! ${playerSelection} beats ${computerSelection}`;
+        }
+      }
 
+      if(playerSelection === "Paper"){
+        switch(computerSelection){
+          case "Rock": return `You Win! ${playerSelection} beats ${computerSelection}`;
+          case "Paper": return `It's a tie!`;
+          case "Scissors": return `You Lose! ${computerSelection} beats ${playerSelection}`;
+        }
+      }
+
+      if(playerSelection === "Scissors"){
+        switch(computerSelection){
+          case "Rock": return `You Lose! ${computerSelection} beats ${playerSelection}`;
+          case "Paper": return `You Win! ${playerSelection} beats ${computerSelection}`;
+          case "Scissors": return `It's a tie!`;
+        }
+      }
+    }
+
+    console.log(playRound(playerPlay(), computerPlay()));
   </script>
 </body>
 </html>
