@@ -7,24 +7,81 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class = top-div>
-    <div class = player>
-      <div>Player score: </div>
-      <div class ="player-score">0</div>
+
+  <div class ="top-div">
+
+    <div class ="container">
+      <div class ="player">
+        <div>Player score: </div>
+        <div class ="player-score">0</div>
+      </div>
+    </div>
+    
+    <div class ="container">
+      <div class ="computer">
+        <div>Computer score: </div>
+        <div class ="computer-score">0</div>
+      </div>
     </div>
 
-    <div class = computer>
-      <div>Computer score: </div>
-      <div class ="computer-score">0</div>
+    <div class ="container">
+      <div class ="total">
+        <div>Total Rounds: </div>
+        <div class ="total-rounds">0</div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class ="main-div">
+    <div class="container">
+      <button class="fire"></button>
+    </div>
+
+    <div class="container">
+      <button class="water"></button>
+    </div>
+
+    <div class="container">
+      <button class="grass"></button>
+    </div>
+
+  </div>
+
+  <div class ="picture-div">
+
+    <div class="container">
+      <div class="user-pokemon">
+        <img id="cyndaquil" src="media/playerCyndaquil.png" />
+        <img id="totodile" src="media/playerTotodile.png" />
+        <img id="chikorita" src="media/playerChikorita.png" />
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="choice">
+        <img id ="fire-pic" src="media/fire.jpg" />
+        <img id ="water-pic" src="media/water.jpg" />
+        <img id ="grass-pic" src="media/grass.jpg" />
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="computer-pokemon">
+        <img id="cyndaquil-comp" src="media/cyndaquil.png" />
+        <img id="totodile-comp" src="media/totodile.png" />
+        <img id="chikorita-comp" src="media/chikorita.png" />
+      </div>
+    </div>
+
+  </div>
+
+  <div class ="bottom-div">
+    <div class ="container">
+      <div class ="status">--START BATTLE--</div>
     </div>
   </div>
 
-  <div class = main-div>
-    <button class="rock">FIRE</button>
-    <button class="paper">WATER</button>
-    <button class="scissors">GRASS</button>
-  </div>
-
-  <div class = bottom-div>--START BATTLE--</div>
 </body>
 </html>
