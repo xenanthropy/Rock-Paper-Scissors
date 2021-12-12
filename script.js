@@ -37,7 +37,7 @@ function playRound(playerSelection, computerSelection){
             makeVisible("cyndaquil");
             totalRounds++;
             switch(computerSelection){
-                case "Fire": makeVisible("cyndaquil-comp","fire-pic"); statusText.textContent = "It's a tie!"; break;
+                case "Fire": makeVisible("cyndaquil-comp"); statusText.textContent = "It's a tie!"; break;
                 case "Water": makeVisible("totodile-comp", "water-pic"); computerCount++; statusText.textContent = `You Lose! ${computerSelection} beats ${playerSelection}`; break;
                 case "Grass": makeVisible("chikorita-comp", "fire-pic"); playerCount++; statusText.textContent = `You Win! ${playerSelection} beats ${computerSelection}`; break;
             }
@@ -46,8 +46,8 @@ function playRound(playerSelection, computerSelection){
             makeVisible("totodile");
             totalRounds++;
             switch(computerSelection){
-                case "Fire": makeVisible("cyndaquil-comp","fire-pic"); playerCount++; statusText.textContent = `You Win! ${playerSelection} beats ${computerSelection}`; break;
-                case "Water": makeVisible("totodile-comp","water-pic"); statusText.textContent = `It's a tie!`; break;
+                case "Fire": makeVisible("cyndaquil-comp","water-pic"); playerCount++; statusText.textContent = `You Win! ${playerSelection} beats ${computerSelection}`; break;
+                case "Water": makeVisible("totodile-comp"); statusText.textContent = `It's a tie!`; break;
                 case "Grass": makeVisible("chikorita-comp","grass-pic"); computerCount++; statusText.textContent = `You Lose! ${computerSelection} beats ${playerSelection}`; break;
             }
         }
@@ -55,9 +55,9 @@ function playRound(playerSelection, computerSelection){
             makeVisible("chikorita");
             totalRounds++;
             switch(computerSelection){
-                case "Fire": makeVisible("cyndaquil-comp","water-pic"); computerCount++; statusText.textContent = `You Lose! ${computerSelection} beats ${playerSelection}`; break;
-                case "Water": makeVisible("totodile-comp","water-pic"); playerCount++; statusText.textContent = `You Win! ${playerSelection} beats ${computerSelection}`; break;
-                case "Grass": makeVisible("chikorita-comp","grass-pic"); statusText.textContent = `It's a tie!`; break;
+                case "Fire": makeVisible("cyndaquil-comp","fire-pic"); computerCount++; statusText.textContent = `You Lose! ${computerSelection} beats ${playerSelection}`; break;
+                case "Water": makeVisible("totodile-comp","grass-pic"); playerCount++; statusText.textContent = `You Win! ${playerSelection} beats ${computerSelection}`; break;
+                case "Grass": makeVisible("chikorita-comp"); statusText.textContent = `It's a tie!`; break;
             }
         }
 
