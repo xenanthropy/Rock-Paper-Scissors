@@ -4,13 +4,13 @@ let playerCount = 0;
 let computerCount = 0;
 let winner = "";
 
-let statusText = document.querySelector('.bottom-div');
+let statusText = document.querySelector('.status');
 let playerScoreText = document.querySelector('.player-score');
 let computerScoreText = document.querySelector('.computer-score');
 
-let rockButton = document.querySelector('.rock');
-let paperButton = document.querySelector('.paper');
-let scissorsButton = document.querySelector('.scissors');
+let fireButton = document.querySelector('.fire');
+let waterButton = document.querySelector('.water');
+let grassButton = document.querySelector('.grass');
 
 
 
@@ -19,13 +19,13 @@ Based off of the number randomly selected */
 function computerPlay() {
     let randomNumber = Math.floor(Math.random() * 100) + 1;
     if(randomNumber <= 33){
-        return "Rock";
+        return "Fire";
     }
     else if(randomNumber <= 66 && randomNumber > 33){
-        return "Paper";
+        return "Water";
     }
     else if(randomNumber > 66){
-        return "Scissors";
+        return "Grass";
     }
 }
 
@@ -35,23 +35,23 @@ function playRound(playerSelection, computerSelection){
     if(playerCount < 5 && computerCount < 5){
         if(playerSelection === "Fire"){
             switch(computerSelection){
-                case "Rock": statusText.textContent = "It's a tie!"; break;
-                case "Paper": computerCount++; statusText.textContent = `You Lose! ${computerSelection} beats ${playerSelection}`; break;
-                case "Scissors": playerCount++; statusText.textContent = `You Win! ${playerSelection} beats ${computerSelection}`; break;
+                case "Fire": statusText.textContent = "It's a tie!"; break;
+                case "Water": computerCount++; statusText.textContent = `You Lose! ${computerSelection} beats ${playerSelection}`; break;
+                case "Grass": playerCount++; statusText.textContent = `You Win! ${playerSelection} beats ${computerSelection}`; break;
             }
         }
         if(playerSelection === "Water"){
             switch(computerSelection){
-                case "Rock": playerCount++; statusText.textContent = `You Win! ${playerSelection} beats ${computerSelection}`; break;
-                case "Paper": statusText.textContent = `It's a tie!`; break;
-                case "Scissors": computerCount++; statusText.textContent = `You Lose! ${computerSelection} beats ${playerSelection}`; break;
+                case "Fire": playerCount++; statusText.textContent = `You Win! ${playerSelection} beats ${computerSelection}`; break;
+                case "Water": statusText.textContent = `It's a tie!`; break;
+                case "Grass": computerCount++; statusText.textContent = `You Lose! ${computerSelection} beats ${playerSelection}`; break;
             }
         }
         if(playerSelection === "Grass"){
             switch(computerSelection){
-                case "Rock": computerCount++; statusText.textContent = `You Lose! ${computerSelection} beats ${playerSelection}`; break;
-                case "Paper": playerCount++; statusText.textContent = `You Win! ${playerSelection} beats ${computerSelection}`; break;
-                case "Scissors": statusText.textContent = `It's a tie!`; break;
+                case "Fire": computerCount++; statusText.textContent = `You Lose! ${computerSelection} beats ${playerSelection}`; break;
+                case "Water": playerCount++; statusText.textContent = `You Win! ${playerSelection} beats ${computerSelection}`; break;
+                case "Grass": statusText.textContent = `It's a tie!`; break;
             }
         }
 
@@ -82,15 +82,14 @@ function playRound(playerSelection, computerSelection){
 
     */
       
-rockButton.addEventListener('click', () => {
+fireButton.addEventListener('click', () => {
     playRound("Fire",computerPlay());
 });
 
-
-paperButton.addEventListener('click', () => {
+waterButton.addEventListener('click', () => {
     playRound("Water",computerPlay());
 });
 
-scissorsButton.addEventListener('click', () => {
+grassButton.addEventListener('click', () => {
     playRound("Grass",computerPlay());
 });
