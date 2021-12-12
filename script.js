@@ -75,6 +75,7 @@ function playRound(playerSelection, computerSelection){
 
 }
 
+// Makes all lower images invisible
 function makeInvisible(){
     pokeArray = ["cyndaquil","totodile","chikorita","cyndaquil-comp","totodile-comp","chikorita-comp","fire-pic","water-pic","grass-pic"];
     for (i = 0; i < pokeArray.length; i++) {
@@ -82,6 +83,7 @@ function makeInvisible(){
      }
 }
 
+// makes selected images visible
 function makeVisible(){
     for (i = 0; i < arguments.length; i++) {
         document.getElementById(arguments[i]).style.visibility = "visible";
@@ -101,5 +103,3 @@ waterButton.addEventListener('click', () => {
 grassButton.addEventListener('click', () => {
     playRound("Grass",computerPlay());
 });
-
-//document.getElementById('cyndaquil').style.visibility = "hidden";

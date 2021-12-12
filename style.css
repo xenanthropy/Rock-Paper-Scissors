@@ -113,27 +113,6 @@ img {
     margin-top: -42px;
 }
 
-/*
-.cyndaquil, .cyndaquilComp {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    top: 12px;
-    left: 8px;
-    z-index: 1;
-}
-
-.totodile {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    top: 12px;
-    left: 8px;
-    z-index: 6;
-}
-
-*/
-
 .trainer, .user-pokemon, .choice, .computer-pokemon, .opponent {
     width: 100px;
     height: 100px;
