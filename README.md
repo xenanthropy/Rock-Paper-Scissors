@@ -1,2 +1,2 @@
 # Rock-Paper-Scissors
-a game of rock paper scissors (The Odin Project assignment)
+A (modified) game of rock paper scissors for The Odin Project
